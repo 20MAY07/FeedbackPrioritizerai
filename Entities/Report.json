@@ -1,0 +1,45 @@
+{
+  "name": "Report",
+  "type": "object",
+  "properties": {
+    "week_start_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Start date of the reporting week"
+    },
+    "week_end_date": {
+      "type": "string",
+      "format": "date",
+      "description": "End date of the reporting week"
+    },
+    "report_markdown": {
+      "type": "string",
+      "description": "The generated report in markdown format"
+    },
+    "total_feedback_count": {
+      "type": "number",
+      "description": "Total number of feedback entries analyzed"
+    },
+    "high_urgency_count": {
+      "type": "number",
+      "description": "Number of high urgency items"
+    },
+    "sentiment_summary": {
+      "type": "object",
+      "properties": {
+        "positive": {
+          "type": "number"
+        },
+        "neutral": {
+          "type": "number"
+        },
+        "negative": {
+          "type": "number"
+        }
+      }
+    }
+  },
+  "required": [
+    "report_markdown"
+  ]
+}
